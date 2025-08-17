@@ -4,7 +4,7 @@
 #include <string>
 #include <Windows.h>
 
-#define version "1.0.0"
+#define version "1.0.1"
 #define tab "    "
 #define parentheses 0
 #define square_brackets 1
@@ -26,3 +26,4 @@ void clear();	// Очищает экран терминала
 
 
 void print_message(whose_message whose_message, std::string text);	// Выводит текст: [whose_message]	text
+
