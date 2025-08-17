@@ -1,0 +1,109 @@
+Function Library FerrumNitka	v1.0.0
+Документация
+
+[ Внимание! это первая версия библиотеки в будущем некоторые вещи могут измениться! ]
+
+=== оглавление ====
+1. Про библиотеку
+2. Приступая к работе
+3. разбор функций и макроса
+4. Ошибки и как их решить
+5. Разбор кода
+
+=== Про библиотеку ====
+Эта библиотека предназначена для работы с терминалом Windows
+[ Внимание! это библиотека использует функции из "Windows.h", это библиотека не может
+работать с другими ос, только Windows ]
+
+=== Приступая к работе ====
+1. Добавьте файлы библиотеки в проект 
+2. Подключите заголовочный файл "FunctionLibrary.h"
+3. Перед тем как использовать функции из библиотеки, необходимо вызвать функцию init_variables
+4. В конце кода нужно вызвать функцию close_variables
+
+пример простой программы:
+#include "FunctionLibrary.h"
+#include "colors.h"
+#include "transparency.h"
+
+
+int main()
+{
+	transparency();
+	init_variables();
+
+	set_color(color_red, color_gray);
+	print_info();
+
+	std::cin.ignore();
+	close_variables();
+	return 0;
+}
+
+
+
+=== разбор функций и макроса ====
+init_variables();	Инициализирует переменные handle и coord
+
+
+close_variables();	Вызывает функцию из "Windows.h" CloseHandle(handle)
+
+
+print_info();	Выводит версию библиотеки
+
+
+in_parentheses(std::string text, uc type);
+type тип
+Возвращает текст в скобках, есть два типа
+parentheses (Круглые скобки) и square_brackets (Квадратные скобки)
+
+
+print_line(uc length);	Выводит символ "=" определённое количество раз
+length	длина
+
+
+set_color(uc color_text, uc color_background);	Задаёт цвет текста и фона, перед использованием
+рекомендуется подключить заголовочный файл "colors.h"
+color_text	цвет текста
+color_background	цвет фона текста
+
+
+print_message(whose_message whose_message, std::string text);	Выводит текст: [whose_message]	text
+whose_message	это typedef std::string whose_message; проще говоря строка
+
+
+transparency(); Убирает прозрачность окна терминала, нужно подключить заголовочный файл "transparency.h"
+
+=== Ошибки и как их решить ====
+Не работает set_color: Вы забыли вызвать функцию init_variables
+
+=== Разбор кода ====
+1. структура
+[Function Library FerrumNitka]:
+----[cpp]:
+--------1.cpp
+--------2.cpp
+----[h]:
+--------colors.h
+--------transparency.h
+--------variables.h
+----FunctionLibrary.h
+
+2. Описание файлов
+FunctionLibrary.h	в нём находятся заголовки функций
+
+1.cpp	Определение функций которые используют переменые handle из variables.h
+2.cpp	Определение остальных функций
+
+colors.h	Определяет макросы для set_color
+color_red 
+color_green
+color_blue
+color_black
+color_gray
+color_darkgray
+color_white
+
+variables.h	Переменные для 1.cpp
+transparency.h	Макрос чтобы убрать прозрачность окна терминала
+
