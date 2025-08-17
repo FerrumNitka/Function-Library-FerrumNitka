@@ -8,7 +8,7 @@
 4. В конце кода нужно вызвать функцию close_variables
 
 # пример простой программы:
-#include "FunctionLibrary.h"
+{#include "FunctionLibrary.h"
 #include "colors.h"
 #include "transparency.h"
 
@@ -24,4 +24,4 @@ int main()
 	std::cin.ignore();
 	close_variables();
 	return 0;
-}
+}}
