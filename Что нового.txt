@@ -1,0 +1,8 @@
+v1.0.2
+
+Что нового?
+- Теперь если не вызвана функция init_variables,
+то функция set_color будет выводить следующие "Error!"
+- Функция print_info() выводит следующие:
+Function Library FerrumNitka    v1.0.2
+Copyright (c) 2025 FerrumNitka

@@ -3,4 +3,4 @@
 
 HANDLE handle;
 bool init = false;
-//COORD coord
+//COORD coord;

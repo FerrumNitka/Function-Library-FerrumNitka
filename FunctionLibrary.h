@@ -14,17 +14,14 @@ typedef unsigned char uc;
 typedef std::string whose_message;
 
 
-void init_variables();	// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ РїРµСЂРµРјРµРЅРЅС‹Рµ
+void init_variables();	// Инициализирует переменные
 void close_variables();	// CloseHandle(handle);
-void print_info();	// Р’С‹РІРѕРґРёС‚ РІРµСЂСЃРёСЋ Р±РёР±Р»РёРѕС‚РµРєРё
+void print_info();	// Выводит версию библиотеки
 
-std::string in_parentheses(std::string text, uc type);	// Р’РѕР·РІСЂР°С‰Р°РµС‚ С‚РµРєСЃС‚ РІ СЃРєРѕР±РєР°С…
+std::string in_parentheses(std::string text, uc type);	// Возвращает текст в скобках
 
-void print_line(uc length);	// Р’С‹РІРѕРґРёС‚ СЃРёРјРІРѕР» "=" РѕРїСЂРµРґРµР»С‘РЅРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЂР°Р·
-void set_color(uc color_text, uc color_background);	// Р—Р°РґР°С‘С‚ С†РІРµС‚
-void clear();	// РћС‡РёС‰Р°РµС‚ СЌРєСЂР°РЅ С‚РµСЂРјРёРЅР°Р»Р°
+void print_line(uc length);	// Выводит символ "=" определённое количество раз
+void set_color(uc color_text, uc color_background);	// Задаёт цвет
+void clear();	// Очищает экран терминала
 
-
-void print_message(whose_message whose_message, std::string text);	// Р’С‹РІРѕРґРёС‚ С‚РµРєСЃС‚: [whose_message]	text
-
-
+void print_message(whose_message whose_message, std::string text);	// Выводит текст: [whose_message]	text
