@@ -2,4 +2,5 @@
 #include <Windows.h>
 
 HANDLE handle;
-COORD coord;
+bool init = false;
+//COORD coord
