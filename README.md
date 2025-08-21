@@ -20,13 +20,11 @@
 int main()
 {
 	transparency();
-	init_variables();
 
 	set_color(color_red, color_gray);
 	print_info();
 
 	std::cin.ignore();
-	close_variables();
 	return 0;
 }
 ```
