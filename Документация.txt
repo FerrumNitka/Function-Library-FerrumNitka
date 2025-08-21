@@ -1,5 +1,7 @@
-Function Library FerrumNitka	v1.0.0
+Function Library FerrumNitka	v1.1.0
 Документация
+
+ВНИМАНИЕ! в этой версии ненужно вызывать функции  init_variables и close_variables
 
 [ Внимание! это первая версия библиотеки в будущем некоторые вещи могут измениться! ]
 
@@ -18,8 +20,7 @@ Function Library FerrumNitka	v1.0.0
 === Приступая к работе ====
 1. Добавьте файлы библиотеки в проект 
 2. Подключите заголовочный файл "FunctionLibrary.h"
-3. Перед тем как использовать функции из библиотеки, необходимо вызвать функцию init_variables
-4. В конце кода нужно вызвать функцию close_variables
+
 
 пример простой программы:
 #include "FunctionLibrary.h"
@@ -30,24 +31,17 @@ Function Library FerrumNitka	v1.0.0
 int main()
 {
 	transparency();
-	init_variables();
 
 	set_color(color_red, color_gray);
 	print_info();
 
 	std::cin.ignore();
-	close_variables();
 	return 0;
 }
 
 
 
 === разбор функций и макроса ====
-init_variables();	Инициализирует переменные handle и coord
-
-
-close_variables();	Вызывает функцию из "Windows.h" CloseHandle(handle)
-
 
 print_info();	Выводит версию библиотеки
 
@@ -73,9 +67,6 @@ whose_message	это typedef std::string whose_message; проще говоря 
 
 
 transparency(); Убирает прозрачность окна терминала, нужно подключить заголовочный файл "transparency.h"
-
-=== Ошибки и как их решить ====
-Не работает set_color: Вы забыли вызвать функцию init_variables
 
 === Разбор кода ====
 1. структура

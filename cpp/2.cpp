@@ -1,4 +1,4 @@
-#include "FunctionLibrary.h"
+п»ї#include "FunctionLibrary.h"
 
 
 std::string in_parentheses(std::string text, uc type)
@@ -29,5 +29,5 @@ void print_message(whose_message whose_message, std::string text)
 
 void clear()
 {
-	system("clear");	// Это временно, В будущих версиях это изменится!
+	system("cls");	// Р­С‚Рѕ РІСЂРµРјРµРЅРЅРѕ, Р’ Р±СѓРґСѓС‰РёС… РІРµСЂСЃРёСЏС… СЌС‚Рѕ РёР·РјРµРЅРёС‚СЃСЏ!
 }
